@@ -76,9 +76,9 @@ if __name__ == '__main__':
         tf.logging.set_verbosity(tf.logging.INFO) # Just to have some logs to display for demonstration
         #training
         filename = pargs.image
-        cv_image = cv2.imread(filename)
-        cv2.imshow("image", cv2.resize(cv_image, (200,200)))
-        cv2.waitKey()
+        #cv_image = cv2.imread(filename)
+        #cv2.imshow("image", cv2.resize(cv_image, (200,200)))
+        #cv2.waitKey()
         input_image = input_fn(filename, image_shape, mean_img)
         print(input_image.shape)
         predict_input_fn = tf.estimator.inputs.numpy_input_fn(
