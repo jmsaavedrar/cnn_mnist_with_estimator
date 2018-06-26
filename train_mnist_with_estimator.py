@@ -4,8 +4,8 @@
 Created on Mon Mar  5 16:30:08 2018
 @author: jose.saavedra
 
-A convolutional neural network for sk_net
-This uses Dataset and Estimator componentes from tensorflow
+A convolutional neural network for mnist
+This uses Dataset and Estimator components from tensorflow
 
 """
 import utils.data as data

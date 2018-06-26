@@ -2,16 +2,13 @@
 Created on Mon Apr 16 2018
 @author: jsaavedr
 
-Description: A list of function to create tfrecords
+Description: prepare your data for training and testing
 """
 
 import utils.data as data
-import matplotlib.pyplot as plt
-import  numpy as np
 import argparse
 
-def str2bool(v):
-  return v.lower() in ("yes", "true", "t", "1")
+
 
 if __name__ == '__main__':        
     #pathname = "/home/vision/smb-datasets/MNIST/source"

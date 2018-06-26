@@ -14,7 +14,6 @@ import utils.data as data
 import numpy as np
 import os
 import argparse
-import cv2
 from utils.configuration import ConfigurationFile
 import utils.mnist_model as mnistnet
 import tensorflow as tf
@@ -67,18 +66,15 @@ if __name__ == '__main__':
 
     with tf.device(device_name):
         classifier = tf.estimator.Estimator(model_fn = mnistnet.model_fn,
-                                            model_dir = "model/",
+                                            model_dir = os.path.dirname(pargs.ckpt)
                                             params = {'learning_rate' : 0,
-                                                      'number_of_classes' : 10,
+                                                      'number_of_classes' : conf.getNumnberOfClasses(),
                                                       'image_shape' : image_shape
                                                       })
         #
         tf.logging.set_verbosity(tf.logging.INFO) # Just to have some logs to display for demonstration
         #training
-        filename = pargs.image
-        #cv_image = cv2.imread(filename)
-        #cv2.imshow("image", cv2.resize(cv_image, (200,200)))
-        #cv2.waitKey()
+        filename = pargs.image        
         input_image = input_fn(filename, image_shape, mean_img)
         print(input_image.shape)
         predict_input_fn = tf.estimator.inputs.numpy_input_fn(
