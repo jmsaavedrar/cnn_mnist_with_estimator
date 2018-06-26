@@ -87,8 +87,9 @@ if __name__ == '__main__':
         for prediction in predicted_result:
             print("idx_predicted_class: {}".format(prediction["idx_predicted_class"]))
             deep_features = prediction["deep_feature"]
-            print("deep_feature: {}".format(deep_features.shape))
-            print("deep-features")
+            #uncomment to deep-features be showed
+            #print("deep_feature: {}".format(deep_features.shape))
+            #print("deep-features")
             print("-------------")
             print(deep_features)
 
