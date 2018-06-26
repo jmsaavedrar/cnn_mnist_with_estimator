@@ -86,11 +86,11 @@ if __name__ == '__main__':
         predicted_result = list(classifier.predict(input_fn = predict_input_fn))
         for prediction in predicted_result:
             print("idx_predicted_class: {}".format(prediction["idx_predicted_class"]))
-            deep_features = prediction["deep_feature"]
+            #deep_features = prediction["deep_feature"]
             #uncomment to deep-features be showed
             #print("deep_feature: {}".format(deep_features.shape))
             #print("deep-features")
-            print("-------------")
-            print(deep_features)
+            #print("-------------")
+            #print(deep_features)
 
     print("ok")
