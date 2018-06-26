@@ -30,5 +30,5 @@ DATA_DIR = /home/vision/smb-datasets/MNIST/ [need to be replaced]
 **demo_mnist.py**  -image /home/vision/smb-datasets/MNIST/Test/digit_mnist_09989_5.png -device cpu -arch MNIST -ckpt model/model.ckpt-10000 <p>
 You can get deep-features if line 89 is uncommented
 # Dependencies
-  * Tensorflow  >1.8 
+  * Tensorflow  >=1.8 
   * Opencv 3.4.1
