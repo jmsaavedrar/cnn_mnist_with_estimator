@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
     with tf.device(device_name):
         classifier = tf.estimator.Estimator(model_fn = mnistnet.model_fn,
-                                            model_dir = os.path.dirname(pargs.ckpt)
+                                            model_dir = os.path.dirname(pargs.ckpt),
                                             params = {'learning_rate' : 0,
                                                       'number_of_classes' : conf.getNumnberOfClasses(),
                                                       'image_shape' : image_shape
